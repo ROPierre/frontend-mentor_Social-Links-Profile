@@ -1,0 +1,125 @@
+:root {
+    --primary-color-dark: #141414; 
+    --primary-color-medium: #1F1F1F; 
+    --primary-color-light: #333333; 
+    --active-color: #C4F82A;
+
+    --font-color: #FFFFFF;
+    --font-family: "Inter", sans-serif;
+    --font-size-m: 14px;
+    --font-size-l: 24px;
+    --font-weight-bolder: 700;
+    --font-weight-bold: 600;
+    --font-weight-regular: 300;
+    --font-weight-thin: 300;
+
+    --padding-l: 40px;
+    --padding-m: 24px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-dark);
+    font-family: var(--font-family);
+    color: var(--font-color); 
+    line-height: 150%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    height: auto;
+    width: 384px;
+    padding: var(--padding-l) 0;
+    background-color: var(--primary-color-medium);
+    text-align: center;
+    border-radius: 12px;
+
+    @media (max-width: 768px) {
+        padding: var(--padding-m);
+        width: auto;
+    }
+}
+
+.card__avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+}
+
+.profile__name {
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 4px;
+}
+
+.profile__nationality {
+    font-size: var(--font-size-m);
+    color: var(--active-color); 
+    font-weight: var(--font-weight-bolder);
+}
+
+.card__quote p {
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-thin);
+}
+
+.card__socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.card__socials a {
+    text-decoration: none;
+}
+
+.card__socials button {
+    padding: 12px;
+    font-size: var(--font-size-m);
+    border-radius: 8px;
+    border: none;
+    outline: none; 
+    background-color: var(--primary-color-light);
+    color: var(--font-color);
+    font-weight: var(--font-weight-bold);
+    line-height: 150%;
+    width: 304px;
+    height: auto;
+    cursor: pointer;
+    gap: 8px;
+    transition: all ease 0.5s;
+
+    &:hover {
+        background-color: var(--active-color);
+        color: var(--primary-color-light);
+    }
+
+    @media (max-width: 768px) {
+        min-width: 209px;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 2rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
